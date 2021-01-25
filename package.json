@@ -1,0 +1,20 @@
+{
+  "name": "3d-buildings-geojson",
+  "version": "1.0.0",
+  "description": "通过在地图上绘制区域框获取此区域内3d buildings数据 生成geojson, shp, 3dtiles格式数据  ",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "coordtransform": "^2.1.2",
+    "express": "^4.17.1",
+    "geojson2shp": "^0.3.2",
+    "lodash": "^4.17.4",
+    "node-stream-zip": "^1.12.0",
+    "tile-lnglat-transform": "^1.3.1"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "convert": "node test.js"
+  }
+}
