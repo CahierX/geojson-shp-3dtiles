@@ -5,7 +5,10 @@
  * @LastEditors: cbz
  * @LastEditTime: 2021-01-25 10:51:48
 -->
-
+先看效果图
+![image](https://user-images.githubusercontent.com/31394482/121152676-ff9bdc00-c877-11eb-89ec-1305e6e7ec80.png)
+https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/9c0b6ac1892d4f08ab997de3432f55bc~tplv-k3u1fbpfcp-watermark.image
+https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/72ed70f6dc834a91944e4eda9948e313~tplv-k3u1fbpfcp-watermark.image
 # 3d-buildings-geojson
 
 Obtain 3d buildings data in this area by drawing the area frame on the map to generate geojson, shp, 3dtiles format data<br>
