@@ -69,7 +69,7 @@ app.get('/getData', function (req, res) {
     const tileStr = chunk.map(tile => {
       // https://c-data.3dbuildings.com/tile/13/6859/3347.pbf?token=dixw8kmb
       // return `https://data.osmbuildings.org/0.2/anonymous/tile/${zoom}/${tile[0]}/${tile[1]}.json`
-      return `https://c-data.3dbuildings.com/tile/${zoom}/${tile[0]}/${tile[1]}.json?token=dixw8kmb`
+      return `https://d-data.onegeo.co/maps/tiles/${zoom}/${tile[0]}/${tile[1]}.json?token=b0ce721f1d4a4f29`
     });
     return tileStr;
   });
@@ -151,16 +151,20 @@ app.get('/getData', function (req, res) {
     for (let item of urlList) {
       for (let url of item) {
         console.log(`爬取瓦片源：${url}`);
-        const { data } = await Axios.get(url, {
-          header: {
-            'Accept': ' */*',
-            'Accept-Language': 'zh-CN,zh;q=0.9',
-            'Content-Type': 'application/json; charset=UTF-8',
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'
-          }
+        const res = await Axios.get(url, {
+          headers: {
+            'Accept': '*/*',
+            'Cache-Control': 'no-cache',
+            'Referer': 'https://onegeo.co/',
+            'Sec-Fetch-Dest': 'empty',
+            'Sec-Fetch-Mode': 'cors',
+            'Sec-Fetch-Site': 'same-site',
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+          },
+          timeout: 10000
         })
-        if (data.features) {
-          fullFeatures = fullFeatures.concat(data.features)
+        if (res.data.features) {
+          fullFeatures = fullFeatures.concat(res.data.features)
         }
       }
     }

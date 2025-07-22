@@ -18,7 +18,7 @@ Obtain 3d buildings data in this area by drawing the area frame on the map to ge
 
 #### 1. Clone remote codes to local, then use the `yarn` command to install the project in local directory.
 
-#### 2. Execute `mkdir dist` and dist/3dtilesFiles in the project root directory (do not need to do this if the directory already exists).
+#### 2. Execute `mkdir dist` and dist/shp in the project root directory (do not need to do this if the directory already exists).
 
 #### 3. Incoming map data GET.
 
@@ -34,7 +34,7 @@ http://127.0.0.1:3000/getData?lnglatRange=lng,lat,lng1,lat1&zoom=15
 
 #### 1. clone 代码到本地，根目录使用 `yarn` 命令安装项目
 
-#### 2. 项目根目录下执行 新建 dist 文件夹和 dist/3dtilesFiles 文件夹 （若目录已存在则不需要）
+#### 2. 项目根目录下执行 新建 dist 文件夹和 dist/shp 文件夹 （若目录已存在则不需要）
 
 #### 3. 传入地图数据 get 请求：
 
